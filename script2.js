@@ -54,13 +54,16 @@ var houseadd = function(ele){
 var posx = 300;
 var posy = 200;
 
+var zombie_posx = 300;
+var zombie_posy = 200;
+
 //zombie is available because zombie is defined in map.html
 var zombie = {
 	
 	width: $('.zombie').width(),
 	height: $('.zombie').height(),
-	posx:  333,
-	posy: 33,
+	posx:  zombie_posx,
+	posy: zombie_posy,
 	//what is this?
 	pwidth: $('.zombie').offset().left + $('.zombie').width(),
 	pheight:  $('.zombie').offset().top + $('.zombie').height(),
@@ -130,10 +133,14 @@ var finduser = function(){
 	zombie_y = zombie.posy
 	console.log("find user: ccsx %s cssy %s",user_cssx,user_cssy)
 	find_direction(user_cssx,user_cssy,zombie_x,zombie_y)	
-	
+	moveup(user)	
 
 }
 
+var moveup = function(ele){
+	this.posy = $(ele).posy()
+	console.log("jamesjmaes%s"%(this.posy()))
+};	
 
 //Players starting position
 var posx = 300;
@@ -305,8 +312,8 @@ var mvdown = function(){
 	
 
 
-	
-	
+
+
 
 
 
@@ -355,9 +362,8 @@ console.log("james: %s",$("#james").offset())
 
 //pos x, pos y
 var move_zombie = function(){
-	console.log("zombie moving %s %s",user.posx,"james")
+	//console.log("zombie moving %s %s",user.posx,"james")
 	dir=finduser()	
-	
 	}
 //create a function that moves zomie 1 step closer to user
 

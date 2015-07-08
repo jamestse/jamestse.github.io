@@ -18,13 +18,13 @@ div{
 	
 	}
 .zombie {
-	width: 5px;
-	height: 5px;
+	width: 10px;
+	height: 10px;
 	position: relative
 	z-index: 2;
 	background-color: black;
-	left: 300px;
-	top: 100px;
+	left: 400x;
+	top: 150px;
 	padding: 0px;
 	
 	}
